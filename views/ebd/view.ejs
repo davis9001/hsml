@@ -1,0 +1,12 @@
+<h2><a href="/ebd/home/">EBDs</a></h2>
+
+<ul>
+  <li>
+    <%= ebd.name %>
+    <ul>
+      <% _.each(ebd['films'], function(film) { %>
+        <li> <a href="/film/view/<%= film.id %>/"> <%= film.title %> </a> </li>
+      <% }); %>
+    </ul>
+  </li>
+</ul>

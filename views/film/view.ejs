@@ -1,0 +1,14 @@
+<h2> <a href="/film/home/"> Films </a></h2>
+
+<ul>
+  <li>
+    <%= film.title %>
+    <ul>
+      <% _.each(film.ebds, function(ebd) { %>
+        <li> <a href="/ebd/view/<%= ebd.id %>/"> <%= ebd.name %> </a> (<a href="/film/removeEbd/?id=<%= film.id %>&ebdid=<%= ebd.id %>">Remove</a>)</li>
+      <% }); %>
+    </ul>
+    <img src="<%= film.poster %>" />
+  </li>
+  <a href="/film/attachEbdBrowser/<%= film.id %>/">Add EBD</a>
+</ul>

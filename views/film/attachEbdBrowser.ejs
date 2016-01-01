@@ -1,0 +1,9 @@
+<h2>Add EBD to <a href="/film/view/<%= filmId %>"> <%= filmTitle %> </a> </h2>
+<img src="<%= filmPoster %>" />
+<ul>
+  <% _.each(ebds, function (ebd) { %>
+  <li>
+    <a href="/film/attachEbd/<%= filmid %>/?ebdid=<%= ebd.id %>"> <%= ebd.name %> </a>
+  </li>
+  <% }); %>
+</ul>

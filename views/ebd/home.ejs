@@ -1,0 +1,17 @@
+<h2>EBDs</h2>
+
+<ul>
+  <% _.each(ebds, function (ebd) { %>
+  <li>
+    <a href="/ebd/view/<%= ebd.id %>/"> <%= ebd.name %> </a>
+    <ul>
+      <% _.each(ebd['films'], function(film) { %>
+        <li> <a href="/film/view/<%= film.id %>/"> <%= film.title %> </a> </li>
+      <% }); %>
+    </ul>
+  </li>
+  <% }); %>
+  <form action="/ebd/createByName">
+    Create New EBD:<input type="text" name="name" />
+  </form>
+</ul>

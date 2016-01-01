@@ -1,0 +1,17 @@
+<h2>Films</h2>
+
+<ul>
+  <% _.each(films, function (film) { %>
+  <li>
+    <a href="/film/view/<%= film.id %>/"> <%= film.title %> </a>
+    <ul>
+      <% _.each(film.ebds, function(ebd) { %>
+        <li> <a href="/ebd/view/<%= ebd.id %>/"> <%= ebd.name %> </a></li>
+      <% }); %>
+    </ul>
+  </li>
+  <% }); %>
+  <form action="/film/findNewBySearch">
+    Search films to add by title: <input type="text" name="title" />
+  </form>
+</ul>

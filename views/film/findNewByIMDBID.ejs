@@ -1,0 +1,21 @@
+<h2>Films</h2>
+
+<ul>
+  <% for (var k in film) { %>
+    <li> <%= k %>: <%= film[k] %> (<%= typeof film[k] %>) </li>
+    <% if (typeof film[k] != 'string') { %>
+      <ul>
+        <% for (var l in film[k]) { %>
+          <li> <%= l %>: <%= film[k][l] %> (<%= typeof film[k][l] %>) </li>
+        <% }; %>
+      </ul>
+    <% } %>
+  <% }; %>
+  <img src="<%= film.poster %>" />
+  <% if (!filmExists) { %>
+    <a href="/film/addNewFilm?imdbid=<%= film.imdb.id %>">Add This Film</a>
+  <% } else { %>
+    <a href="/film/view/<%= existingFilm.id %>/">View Existing Film</a>
+  <% } %>
+
+</ul>

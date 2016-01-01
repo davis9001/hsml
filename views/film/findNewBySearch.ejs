@@ -1,0 +1,19 @@
+<h2> <a href="/film/home/"> Films </a> </h2>
+  <form action="/film/findNewBySearch">
+    Search films to add by title: <input type="text" name="title" />
+  </form>
+
+<ul>
+  <% _.each(films, function (film) { %>
+  <li>
+    <a href="/film/findNewByIMDBID?imdbid=<%= film.imdb %>">
+      <%= film.title %> (<%= JSON.stringify(film.year) %>)
+    </a>
+    <ul>
+      <% for (var k in film) { %>
+        <li> <%= k %>: <%= JSON.stringify(film[k]) %> </li>
+      <% }; %>
+    </ul>
+  </li>
+  <% }); %>
+</ul>
