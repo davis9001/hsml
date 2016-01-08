@@ -51,10 +51,10 @@ module.exports.sockets = {
   // pass: '<redis auth password>',
 
   adapter: 'redis',
-  host: process.env.REDIS_HOST,
-  port: process.env.REDIS_PORT,
-  db: process.env.REDIS_DB,
-  pass: process.env.REDIS_PASSWORD
+  host: 'herring.redistogo.com',
+  port: '10180',
+  db: 'redistogo',
+  pass: 'db6df4b3bf500c6fc212d52c3f4228c5'
 
 
  /***************************************************************************
