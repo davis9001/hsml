@@ -5,6 +5,7 @@
   "description": "Browse films organized by emotional and behavioral disturbances.",
   "keywords": [],
   "dependencies": {
+    "connect-redis": "^1.4.5",
     "ejs": "~0.8.4",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
@@ -26,7 +27,6 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "sails lift",
     "start": "node app.js"
   },
   "main": "app.js",
