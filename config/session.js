@@ -42,11 +42,12 @@ module.exports.session = {
   ***************************************************************************/
 
   // adapter: 'redis',
-  adapter: 'redis',
-  host: 'herring.redistogo.com',
-  port: '10180',
-  db: 'redistogo',
-  pass: 'db6df4b3bf500c6fc212d52c3f4228c5'
+
+  // adapter: 'redis',
+  // host: 'herring.redistogo.com',
+  // port: '10180',
+  // db: 'redistogo',
+  // pass: 'db6df4b3bf500c6fc212d52c3f4228c5'
 
 
   /***************************************************************************
